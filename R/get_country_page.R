@@ -32,8 +32,12 @@ get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
 
   cat("\ndowloading...")
   makeURL()
-  results <- list(fromJSON(this_url)$results)
+  dat <- fromJSON(this_url)
 
+  n <- dat$count
+  if(n < n_results) total_runs <- ceiling(n / 50)
+
+  results <- list(dat$results)
   if(total_runs > 1) {
     for(i in 2:total_runs) {
       cat("\n  page ", i)
@@ -43,5 +47,9 @@ get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
   }
 
   return(rbind.pages(results))
+
+  ifelse(n < n_results,
+         cat("\n    your search returned  ", n, " results"),
+         cat("\n    your search returned  ", n_results, " results"))
 
 }
