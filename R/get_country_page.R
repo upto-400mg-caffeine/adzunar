@@ -3,8 +3,8 @@
 #' This function allows you to query the adzuna API, specifying a keyword, a country code and the number of results that you want. The API limit is 50 but if you specify more than that this function will continue to run your query, request succesive pages of the results and return the aggregate data object as a `data.frame`. You can request results that exceed the maximum returned by the API.
 #' @param keyword A search string (required)
 #' @param country A two letter country code. Any one of "gb", "au", "br", "ca", "de", "fr", "in", "nl", "pl", "ru", "za". Defaults to "gb".
-#' @param id Your app id provided by Adzuna
-#' @param key Your app key provided by Adzuna
+#' @param app_id Your app id provided by Adzuna
+#' @param app_key Your app key provided by Adzuna
 #' @param n_results The number of results requested.
 #' @keywords cats
 #' @export
@@ -46,7 +46,7 @@ get_country_page <- function(keyword, country = "gb", app_id, app_key, n_results
     }
   }
 
-  if(n < n_results){ cat("\n    your search returned ", n, " results") }else{ cat("\n    your search returned ", n_results, " results")) }
+  if(n < n_results){ cat("\n    your search returned ", n, " results") }else{ cat("\n    your search returned ", n_results, " results") }
 
   return(rbind.pages(results))
 
