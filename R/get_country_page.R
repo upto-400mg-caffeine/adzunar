@@ -14,7 +14,7 @@
 #' # key <- [Your app key]
 #' # get_country_page("data science", "gb", id, key)
 
-get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
+get_country_page <- function(keyword, country = "gb", app_id, app_key, n_results = 50) {
 
   total_runs <- 1
   if(n_results > 51) total_runs <- ceiling(n_results / 50)
@@ -24,8 +24,8 @@ get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
                         country,
                         "/search/",
                         page, "?",
-                        "app_id=", id,
-                        "&app_key=", key,
+                        "app_id=", app_id,
+                        "&app_key=", app_key,
                         "&results_per_page=50",
                         "&what=", sub(" ", "%20", keyword))
   }
@@ -46,9 +46,7 @@ get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
     }
   }
 
-  ifelse(n < n_results,
-         cat("\n    your search returned  ", n, " results"),
-         cat("\n    your search returned  ", n_results, " results"))
+  if(n < n_results){ cat("\n    your search returned ", n, " results") }else{ cat("\n    your search returned ", n_results, " results")) }
 
   return(rbind.pages(results))
 
