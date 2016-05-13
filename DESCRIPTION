@@ -1,0 +1,13 @@
+Package: adzunar
+Title: R Wrappers for the Adzunar API
+Version: 0.0.0.9000
+Authors@R: person("Roman", "Popat", email = "roman.popat@thedatalab.com", role = c("aut", "cre"))
+Description: This is a set of wrappers for the Adzuna API. Intended to create an
+    easy R interface for Adzuna. Currently in development.
+Depends:
+    R (>= 3.2.3)
+License: 
+LazyData: true
+Imports:
+    jsonlite
+RoxygenNote: 5.0.1
