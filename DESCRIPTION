@@ -6,7 +6,7 @@ Description: This is a set of wrappers for the Adzuna API. Intended to create an
     easy R interface for Adzuna. Currently in development.
 Depends:
     R (>= 3.2.3)
-License: 
+License: GPL-3
 LazyData: true
 Imports:
     jsonlite

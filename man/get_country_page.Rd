@@ -21,9 +21,10 @@ get_country_page(keyword, country = "gb", id, key, n_results = 50)
 This function allows you to query the adzuna API, specifying a keyword, a country code and the number of results that you want. The API limit is 50 but if you specify more than that this function will continue to run your query, request succesive pages of the results and return the aggregate data object as a data.frame.
 }
 \examples{
-id <- [Your app id]
-key <- [Your app key]
-get_country_page("data science", "gb", id, key)
+# (not run)
+# id <- [Your app id]
+# key <- [Your app key]
+# get_country_page("data science", "gb", id, key)
 }
 \keyword{cats}
 

@@ -9,9 +9,10 @@
 #' @keywords cats
 #' @export
 #' @examples
-#' id <- [Your app id]
-#' key <- [Your app key]
-#' get_country_page("data science", "gb", id, key)
+#' # (not run)
+#' # id <- [Your app id]
+#' # key <- [Your app key]
+#' # get_country_page("data science", "gb", id, key)
 
 get_country_page <- function(keyword, country = "gb", id, key, n_results = 50) {
 
