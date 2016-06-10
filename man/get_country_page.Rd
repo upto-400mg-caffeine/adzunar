@@ -4,7 +4,8 @@
 \alias{get_country_page}
 \title{Function to query the API by keyword country and results page.}
 \usage{
-get_country_page(keyword, country = "gb", app_id, app_key, n_results = 50)
+get_country_page(keyword, country = "gb", app_id, app_key, n_results = 50,
+  max_age = 365)
 }
 \arguments{
 \item{keyword}{A search string (required)}
@@ -16,6 +17,8 @@ get_country_page(keyword, country = "gb", app_id, app_key, n_results = 50)
 \item{app_key}{Your app key provided by Adzuna (required)}
 
 \item{n_results}{The number of results requested. Defaults to 50.}
+
+\item{max_age}{The maximum age in days of the oldest advertisment that will be returned.}
 }
 \description{
 This function allows you to query the adzuna API, specifying a keyword, a country code and the number of results that you want. The API limit is 50 per page but if you specify more than that this function will continue to run your query, request succesive pages of the results and return the aggregate data object as a `data.frame`. You can request results that exceed the maximum returned by the API.

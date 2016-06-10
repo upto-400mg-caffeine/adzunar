@@ -6,6 +6,7 @@
 #' @param app_id Your app id provided by Adzuna (required)
 #' @param app_key Your app key provided by Adzuna (required)
 #' @param n_results The number of results requested. Defaults to 50.
+#' @param max_age The maximum age in days of the oldest advertisment that will be returned.
 #' @keywords adzuna, API, data download, job adverts
 #' @export
 #' @examples
