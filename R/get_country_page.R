@@ -18,7 +18,8 @@ get_country_page <- function(
   keyword,
   country = "gb",
   app_id, app_key,
-  n_results = 50
+  n_results = 50,
+  max_age = 365
 ) {
 
   total_runs <- 1
@@ -32,7 +33,8 @@ get_country_page <- function(
                         "app_id=", app_id,
                         "&app_key=", app_key,
                         "&results_per_page=50",
-                        "&what=", sub(" ", "%20", keyword))
+                        "&what=", sub(" ", "%20", keyword),
+                        "&max_days_old=", max_age)
   }
 
   cat("\ndowloading...")
