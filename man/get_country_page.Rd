@@ -11,14 +11,14 @@ get_country_page(keyword, country = "gb", app_id, app_key, n_results = 50)
 
 \item{country}{A two letter country code. Any one of "gb", "au", "br", "ca", "de", "fr", "in", "nl", "pl", "ru", "za". Defaults to "gb".}
 
-\item{app_id}{Your app id provided by Adzuna}
+\item{app_id}{Your app id provided by Adzuna (required)}
 
-\item{app_key}{Your app key provided by Adzuna}
+\item{app_key}{Your app key provided by Adzuna (required)}
 
-\item{n_results}{The number of results requested.}
+\item{n_results}{The number of results requested. Defaults to 50.}
 }
 \description{
-This function allows you to query the adzuna API, specifying a keyword, a country code and the number of results that you want. The API limit is 50 but if you specify more than that this function will continue to run your query, request succesive pages of the results and return the aggregate data object as a `data.frame`. You can request results that exceed the maximum returned by the API.
+This function allows you to query the adzuna API, specifying a keyword, a country code and the number of results that you want. The API limit is 50 per page but if you specify more than that this function will continue to run your query, request succesive pages of the results and return the aggregate data object as a `data.frame`. You can request results that exceed the maximum returned by the API.
 }
 \examples{
 # (not run)
@@ -26,5 +26,10 @@ This function allows you to query the adzuna API, specifying a keyword, a countr
 # key <- [Your app key]
 # get_country_page("data science", "gb", id, key)
 }
-\keyword{cats}
+\keyword{API,}
+\keyword{adverts}
+\keyword{adzuna,}
+\keyword{data}
+\keyword{download,}
+\keyword{job}
 

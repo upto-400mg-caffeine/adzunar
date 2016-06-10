@@ -5,7 +5,7 @@ Authors@R: person("Roman", "Popat", email = "roman.popat@thedatalab.com", role =
 Description: This is a set of wrappers for the Adzuna API. Intended to create an
     easy R interface for Adzuna. Currently in development.
 Depends:
-    R (>= 3.2.3)
+    R (>= 3.2.2)
 License: GPL-3
 LazyData: true
 Imports:
