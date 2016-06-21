@@ -54,7 +54,7 @@ get_country_page <- function(
     }
   }
 
-  if(n < n_results){ cat("\n    your search returned ", n, " results") }else{ cat("\n    your search returned", n_results, "results") }
+  if(n < n_results){ cat("\n    your search returned ", n, " results\n") }else{ cat("\n    your search returned", n_results, "results\n") }
 
   return(jsonlite::rbind.pages(results))
 
