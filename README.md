@@ -1,4 +1,6 @@
-# adzunar [![Build Status](https://travis-ci.org/rmnppt/adzunar.svg?branch=master)](https://travis-ci.org/rmnppt/adzunar)
+# adzunar 
+
+[![Build Status](https://travis-ci.org/rmnppt/adzunar.svg?branch=master)](https://travis-ci.org/rmnppt/adzunar)
 
 Some wrappers to provide an R interface for the Adzuna API.
 
