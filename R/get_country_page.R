@@ -20,7 +20,7 @@ get_country_page <- function(
   country = "gb",
   app_id, app_key,
   n_results = 50,
-  max_age = 365
+  max_days_ago = 365
 ) {
 
   total_runs <- 1
@@ -35,7 +35,7 @@ get_country_page <- function(
                         "&app_key=", app_key,
                         "&results_per_page=50",
                         "&what=", sub(" ", "%20", keyword),
-                        "&max_days_old=", max_age)
+                        "&max_days_old=", max_days_ago)
   }
 
   cat("\ndowloading...")
@@ -57,5 +57,5 @@ get_country_page <- function(
   if(n < n_results){ cat("\n    your search returned ", n, " results\n") }else{ cat("\n    your search returned", n_results, "results\n") }
 
   #return(jsonlite::rbind.pages(results))
-  return(results)
+  return(data.frame(results))
 }
